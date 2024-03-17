@@ -9,7 +9,7 @@ import Foundation
 
 import Foundation
 
-enum APIEndpointError: Error {
+public enum APIEndpointError: Error {
     case invalidURL(url: String)
     case invalidData
 

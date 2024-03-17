@@ -43,7 +43,7 @@ public protocol APIEndpoint {
 
 extension APIEndpoint {
 
-    public func buildURLRequest(requestType: RequestType) throws -> URLRequest? {
+    public func buildURLRequest(requestType: RequestType) throws -> URLRequest {
         guard let url = self.buildURL() else {
             throw APIEndpointError.invalidURL(url: self.path)
         }
