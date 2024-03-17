@@ -40,10 +40,7 @@ final class APIEndpoint_getTests: XCTestCase {
             URLQueryItem(name: "test", value: testValue)
         ])
 
-        guard let urlRequest = try? testGet.buildURLRequest(requestType: .GET) else {
-            XCTAssert(false, "cannot build url request")
-            return
-        }
+        let urlRequest = try testGet.buildURLRequest(requestType: .GET)
 
         let result: GetResponse = try await urlRequest.send()
 
@@ -59,10 +56,7 @@ final class APIEndpoint_getTests: XCTestCase {
             headers: headers
         )
 
-        guard let urlRequest = try? testGet.buildURLRequest(requestType: .GET) else {
-            XCTAssert(false, "cannot build url request")
-            return
-        }
+        let urlRequest = try testGet.buildURLRequest(requestType: .GET)
 
         let result: GetResponse = try await urlRequest.send()
 
