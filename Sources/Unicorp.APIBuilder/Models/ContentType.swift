@@ -11,7 +11,7 @@ import Foundation
 public enum ContentType: Codable {
     case json
     case xwwwFormUrlEncoded
-    case multipartFormData(boundary: String)
+//    case multipartFormData(boundary: String)
 
     var value: String {
         switch self {
@@ -19,8 +19,8 @@ public enum ContentType: Codable {
             return "application/json"
         case .xwwwFormUrlEncoded:
             return "application/x-www-form-urlencoded"
-        case .multipartFormData(let boundary):
-            return "multipart/form-data; boundary=\(boundary)"
+//        case .multipartFormData(let boundary):
+//            return "multipart/form-data; boundary=\(boundary)"
         }
     }
 }

@@ -85,7 +85,7 @@ extension APIEndpoint {
         request.set(requestType: requestType)
         request.add(headers: headers)
 
-        if let body = body, let httpBody = try? JSONEncoder().encode(body) { //} body?.data(ofType: self.contentType) {
+        if let httpBody = body?.data(ofType: contentType) {
             request.httpBody = httpBody
         }
 
